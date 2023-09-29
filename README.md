@@ -1,6 +1,10 @@
 # Java Homework Directory Generator 
 A command line tool for creating directory structures for our java programming homework.
 
+I have included a template .java file alongside the program if you need it.
+
+Feel free to create issues here on Github for anything that does not work and L'll try to fix it when i have time.
+
 ## Usage
 ### Compile
 ```
@@ -30,4 +34,4 @@ F:\4a00ek44-3016-introduction-to-programming-ahonen-lassi\homework\Main.java
 ```
 Or you can input nothing and the program will not generate given file.
 
-These inputs would generate file structure of `homework\01\e01\Main.java` for e01-15.
+These inputs would generate directory structure of `homework\01\e01\Main.java` for e01-15.
