@@ -3,7 +3,7 @@ A command line tool for creating directory structures for our java programming h
 
 I have included a template .java file alongside the program if you need it.
 
-Feel free to create issues here on Github for anything that does not work and L'll try to fix it when i have time.
+Feel free to create issues here on Github for anything that does not work and I'll try to fix it when I have time.
 
 ## Usage
 ### Compile
