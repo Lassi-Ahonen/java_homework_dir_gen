@@ -59,7 +59,7 @@ public class HomeworkDirectoryGen {
          * @return true when path is valid, otherwise false.
          */
         public boolean setOutputPath(String path) {
-            Path temp = Path.of(path);
+            Path temp = Path.of(sanitizePath(path));
             if (validatePath(temp, false)) {
                 this.m_OutputPath = temp;
                 return true;
@@ -83,7 +83,7 @@ public class HomeworkDirectoryGen {
          * @return true when path is valid, otherwise false.
          */
         public boolean setTemplatePath(String path) {
-            Path temp = Path.of(path);
+            Path temp = Path.of(sanitizePath(path));
             if (validatePath(temp, true)) {
                 this.m_TemplatePath = temp;
                 return true;
@@ -133,6 +133,19 @@ public class HomeworkDirectoryGen {
         private boolean validatePath(Path path, boolean isFile) {
             boolean flag = isFile ? Files.isRegularFile(path) : Files.isDirectory(path);
             return Files.exists(path) && flag ? true : false;
+        }
+
+        /**
+         * Removes possible quotation marks from the path.
+         * 
+         * @param path Path to sanitize.
+         * @return Sanitized path.
+         */
+        private String sanitizePath(String path) {
+            String sanitizedPath = path;
+            sanitizedPath = sanitizedPath.replaceAll("^\"|\"$", "");
+            sanitizedPath = sanitizedPath.replaceAll("^\'|\'$", "");
+            return sanitizedPath;
         }
 
     }
