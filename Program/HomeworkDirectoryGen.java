@@ -10,7 +10,7 @@ import java.nio.file.*;
  * 
  * If you have any issues leave them in my Github repo and i'll try to fix them.
  * 
- * @version 1.0
+ * @version 1.1
  * @author Lassi Ahonen - 23TIKO3
  */
 public class HomeworkDirectoryGen {
